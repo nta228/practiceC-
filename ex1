@@ -1,0 +1,40 @@
+using System;
+
+public class Program
+{
+    static void BaseArea(double r)
+    {
+        double Bas = r * r * Math.PI;
+        Console.WriteLine("Base: "+ Bas);
+    }
+
+
+    static void LateralArea(double r, double h)
+    {
+        double Lat = (2 * Math.PI * r * h);
+        Console.WriteLine("Lateral: " + Lat);
+    }
+
+    static void TotalArea(double r, double h)
+    {
+        double Total = 2 * Math.PI * r * (h + r);
+        Console.WriteLine("Total: " +Total);
+    }
+    static void Volume(double r, double h)
+    {
+        double Vol = Math.PI * r * r * h;
+        Console.WriteLine("Volume: " + Vol);
+    }
+
+
+    public static void Main()
+    {
+        double r = 38.64;
+        double h = 22.48;
+        Console.WriteLine("r = 38.64 h=22.48");
+        BaseArea(r);
+        LateralArea(r, h);
+        TotalArea(r, h);
+        Volume(r, h);
+    }
+}
